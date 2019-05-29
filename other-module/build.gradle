@@ -4,6 +4,19 @@ apply plugin: 'oss-plugin'
 
 mainClassName = 'com.acme.Main'
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
+    compile 'junit:junit:4.12'
     compile project(':my-project:module-a')
 }
+
+test {
+    testLogging {
+        showStandardStreams = true
+    }
+}
+
+

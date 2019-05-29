@@ -3,6 +3,11 @@ apply plugin: 'oss-plugin'
 
 mainClassName = 'org.acme.Main'
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     compile project(':my-project:module-a')
+    compile 'junit:junit:4.12'
 }
