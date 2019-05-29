@@ -1,7 +1,5 @@
 apply plugin: 'application'
 apply plugin: 'oss-plugin'
-//apply plugin: 'jacoco'
-//apply plugin: 'org.sonarqube'
 
 mainClassName = 'org.acme.Main'
 
