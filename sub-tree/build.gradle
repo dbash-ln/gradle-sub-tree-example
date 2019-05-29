@@ -6,7 +6,8 @@ plugins {
 project(':my-project').subprojects {
     apply plugin: 'java'
     apply plugin: 'org.sonarqube'
-    
+    apply plugin: 'jacoco'
+
     repositories {
         mavenCentral()
     }
@@ -21,9 +22,12 @@ project(':my-project').subprojects {
         }
     }
 
-     sonarqube {
-     	properties {
-//			property 'sonar.exclusions', 'src/main/java/com/qad/demo/DemoApplication.java'
-     	}
-     }
+    sonarqube {
+        properties {
+            property 'sonar.projectBaseDir', '.'
+            skipProject = false
+        }
+    }
+
 }
+

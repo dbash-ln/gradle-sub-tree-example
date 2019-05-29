@@ -1,5 +1,7 @@
 apply plugin: 'application'
 apply plugin: 'oss-plugin'
+//apply plugin: 'jacoco'
+//apply plugin: 'org.sonarqube'
 
 mainClassName = 'org.acme.Main'
 
@@ -11,3 +13,4 @@ dependencies {
     compile project(':my-project:module-a')
     compile 'junit:junit:4.12'
 }
+

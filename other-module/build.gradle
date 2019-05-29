@@ -1,6 +1,13 @@
+plugins {
+    id "jacoco"
+    id "org.sonarqube" version "2.7"
+}
+
 apply plugin: 'application'
 apply plugin: ComPlugin
 apply plugin: 'oss-plugin'
+apply plugin: 'org.sonarqube'
+apply plugin: 'jacoco'
 
 mainClassName = 'com.acme.Main'
 
@@ -19,4 +26,10 @@ test {
     }
 }
 
+sonarqube {
+    properties {
+//        property 'sonar.projectBaseDir', '.'
+        skipProject = false
+    }
+}
 
