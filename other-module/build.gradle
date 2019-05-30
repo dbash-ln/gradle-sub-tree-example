@@ -10,6 +10,8 @@ repositories {
     mavenCentral()
 }
 
+test.dependsOn(":my-project:module-a:test")
+
 dependencies {
     compile 'junit:junit:4.12'
     compile project(':my-project:module-a')
